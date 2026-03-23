@@ -105,7 +105,7 @@ hep-ph → Root → hep-ph
 
 ---
 
-## 🔍 Search Functionality
+## Search Functionality
 
 ### Category Search
 Retrieve papers by:
