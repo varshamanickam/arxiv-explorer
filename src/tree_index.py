@@ -33,14 +33,34 @@ class ArxivTree:
             else:
                 top_node.papers.append(paper)
 
+    def collect_all_papers_recursive(self, node):
+        papers = list(node.papers)
+
+        for child_node in node.children.values():
+            papers.extend(self.collect_all_papers_recursive(child_node))
+
+        return papers
+    
+    def get_top_categories(self):
+        return sorted(self.root.children.keys())
+    
+    def get_subcategories(self, top):
+        if top not in self.root.children:
+            return []
+        return sorted(self.root.children[top].children.keys())
+
+
     def search(self, top, sub=None):
         if top not in self.root.children:
             return []
+        top_node = self.root.children[top]
 
         if sub:
-            return self.root.children[top].children.get(sub, TreeNode("")).papers
+            if sub not in top_node.children:
+                return []
+            return self.root.children[top].children[sub].papers
 
-        return self.root.children[top].papers
+        return self.collect_all_papers_recursive(top_node)
 
 
 def load_data():
