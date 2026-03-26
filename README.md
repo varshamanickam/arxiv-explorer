@@ -304,7 +304,10 @@ python src/load_data_check.py
 ```bash
 python src/preprocessing.py
 ```
-This generates: `data/processed/cleaned_arxiv_tree_input.json`
+This generates: 
+```bash
+data/processed/cleaned_arxiv_tree_input.json
+```
 ---
 ### 5. Run tree indexing
 
@@ -323,7 +326,10 @@ This:
 ```bash
 python src/export_json_frontend.py
 ```
-This generates: `data/processed/frontend_tree_data.json`
+This generates: 
+```bash 
+data/processed/frontend_tree_data.json
+```
 Then just place or copy over that file into: `frontend/src/data/frontend_tree_data.json`
 ---
 ### 7. Run the frontend
