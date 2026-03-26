@@ -330,7 +330,10 @@ This generates:
 ```bash 
 data/processed/frontend_tree_data.json
 ```
-Then just place or copy over that file into: `frontend/src/data/frontend_tree_data.json`
+Then just place or copy over that file into: 
+```bash
+frontend/src/data/frontend_tree_data.json
+```
 ---
 ### 7. Run the frontend
 
