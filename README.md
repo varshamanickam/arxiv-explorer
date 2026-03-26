@@ -304,8 +304,9 @@ python src/load_data_check.py
 ```bash
 python src/preprocessing.py
 ```
+This generates: 
 ```bash
-This generates: `data/processed/cleaned_arxiv_tree_input.json`
+data/processed/cleaned_arxiv_tree_input.json
 ```
 ---
 ### 5. Run tree indexing
